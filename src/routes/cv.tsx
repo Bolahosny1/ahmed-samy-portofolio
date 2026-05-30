@@ -22,13 +22,13 @@ export default function CV() {
       `}</style>
 
       <div className="no-print sticky top-0 z-50 flex items-center justify-between gap-3 border-b border-zinc-200 bg-white/95 px-6 py-3 backdrop-blur">
-        <a href="/" className="text-sm font-semibold text-emerald-700 hover:underline">
+        <a href="/" className="text-sm font-semibold text-violet-700 hover:underline">
           ← Back to portfolio
         </a>
         <div className="flex gap-2">
           <button
             onClick={() => window.print()}
-            className="rounded border border-emerald-600 bg-emerald-600 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-700"
+            className="rounded border border-violet-600 bg-violet-600 px-4 py-2 text-sm font-semibold text-white hover:bg-violet-700"
           >
             ⬇ Download PDF
           </button>
@@ -39,12 +39,12 @@ export default function CV() {
         {/* Header */}
         <header className="border-b-2 border-zinc-900 pb-4">
           <h1 className="text-3xl font-bold tracking-tight">AHMED SAMY</h1>
-          <p className="mt-1 text-sm font-medium text-emerald-700">
+          <p className="mt-1 text-sm font-medium text-violet-700">
             Junior Penetration Tester · Bug Bounty Hunter · Security Researcher
           </p>
           <p className="mt-2 text-xs text-zinc-600">
             Alexandria, Egypt · +20 112 489 0707 ·{" "}
-            <a href={`mailto:${EMAIL}`} className="text-emerald-700 underline">
+            <a href={`mailto:${EMAIL}`} className="text-violet-700 underline">
               {EMAIL}
             </a>{" "}
             ·{" "}
@@ -52,7 +52,7 @@ export default function CV() {
               href={LINKEDIN}
               target="_blank"
               rel="noreferrer"
-              className="text-emerald-700 underline"
+              className="text-violet-700 underline"
             >
               linkedin.com/in/ahmedsamyamin
             </a>
@@ -102,7 +102,7 @@ export default function CV() {
           <ul className="space-y-1 text-sm">
             {CERTS.map((c) => (
               <li key={c.n} className="flex gap-3">
-                <span className="font-mono text-emerald-700">{c.y}</span>
+                <span className="font-mono text-violet-700">{c.y}</span>
                 <span>{c.n}</span>
               </li>
             ))}
@@ -146,7 +146,7 @@ export default function CV() {
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <section className="mt-6 break-inside-avoid">
-      <h2 className="mb-3 border-b border-zinc-300 pb-1 text-xs font-bold uppercase tracking-[0.2em] text-emerald-800">
+      <h2 className="mb-3 border-b border-zinc-300 pb-1 text-xs font-bold uppercase tracking-[0.2em] text-violet-800">
         {title}
       </h2>
       {children}
@@ -220,18 +220,6 @@ const EXPERIENCE = [
     ],
   },
   {
-    t: "Jun 2025 — Present",
-    role: "Game Tester — Beta Tester",
-    org: "Dream Team Creative Collective · Freelance",
-    location: "Remote",
-    bullets: [
-      "Tested Web3 and indie game UI/UX, identifying usability issues, design inconsistencies, and functional bugs.",
-      "Documented issues using structured bug reports with reproducible steps, screenshots, and user-flow context.",
-      "Collaborated with developers to improve gameplay through feedback on design, navigation, and interaction.",
-      "Used AI-assisted tools to analyze bug report patterns and automate parts of test documentation.",
-    ],
-  },
-  {
     t: "Nov 2025 — Feb 2026",
     role: "Cyber Security Trainee",
     org: "Cyberthos · Internship",
@@ -240,29 +228,6 @@ const EXPERIENCE = [
       "Practiced network scanning, enumeration, and exploitation using Nmap, Burp Suite, and Metasploit.",
       "Used AI-powered assistants to accelerate research, generate payloads ethically, and document findings.",
       "Participated in hands-on labs covering reconnaissance, OSINT, and basic exploitation.",
-    ],
-  },
-  {
-    t: "May 2025 — Jul 2025",
-    role: "Official Game Night Host — Vexor",
-    org: "Freelance",
-    location: "Remote",
-    bullets: [
-      "Selected for the exclusive Vexor Founder Program — recognized for reputation and engagement.",
-      "Hosted official Web3 Game Night events: match setups, player coordination, and event flow.",
-      "Boosted community participation through fun, competitive, well-organized experiences.",
-      "Earned event-revenue share via Vexor's host reward system.",
-    ],
-  },
-  {
-    t: "Apr 2024 — Mar 2025",
-    role: "3D Visual Designer — Educational Projects",
-    org: "ICPC Future Academy · Freelance",
-    location: "Remote",
-    bullets: [
-      "Created 3D models and animations in Blender to support technical education.",
-      "Designed visual learning assets for memory allocation, data structures, and algorithms.",
-      "Used animations to simplify abstract computing topics for beginner students.",
     ],
   },
 ];

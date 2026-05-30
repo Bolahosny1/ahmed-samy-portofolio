@@ -57,19 +57,6 @@ const EXPERIENCE: ExperienceEntry[] = [
     tags: ["Nikto", "VAPT", "Linux", "Networking"],
   },
   {
-    t: "Jun 2025 — Present",
-    role: "Game Tester — Beta Tester",
-    org: "Dream Team Creative Collective · Freelance",
-    location: "Remote",
-    bullets: [
-      "Tested Web3 and indie game UI/UX — usability, design inconsistencies, functional bugs.",
-      "Documented issues via structured bug reports: reproducible steps, screenshots, user-flow context.",
-      "Improved gameplay through feedback on design, navigation, and interaction.",
-      "Used AI-assisted tools to analyze patterns and automate parts of test documentation.",
-    ],
-    tags: ["Game Testing", "QA", "Web3"],
-  },
-  {
     t: "Nov 2025 — Feb 2026",
     role: "Cyber Security Trainee",
     org: "Cyberthos · Internship",
@@ -80,29 +67,6 @@ const EXPERIENCE: ExperienceEntry[] = [
       "Hands-on labs across reconnaissance, OSINT, and basic exploitation.",
     ],
     tags: ["Nmap", "Burp Suite", "Metasploit"],
-  },
-  {
-    t: "May 2025 — Jul 2025",
-    role: "Official Game Night Host — Vexor",
-    org: "Freelance",
-    location: "Remote",
-    bullets: [
-      "Selected for the exclusive Vexor Founder Program for community reputation and engagement.",
-      "Hosted official Web3 Game Night events: match setups, player coordination, event flow.",
-      "Drove community participation through well-organized competitive experiences.",
-    ],
-    tags: ["Community", "Web3", "Events"],
-  },
-  {
-    t: "Apr 2024 — Mar 2025",
-    role: "3D Visual Designer — Educational Projects",
-    org: "ICPC Future Academy · Freelance",
-    location: "Remote",
-    bullets: [
-      "Created 3D models and animations in Blender to support technical education.",
-      "Designed visual assets explaining memory allocation, data structures, and algorithms.",
-    ],
-    tags: ["Blender", "3D", "Education"],
   },
 ];
 
@@ -154,11 +118,6 @@ const SERVICES = [
     icon: "⌬",
     title: "Vulnerability Assessment (VAPT)",
     body: "Structured VAPT engagements with prioritized findings, proof-of-concept, and remediation steps.",
-  },
-  {
-    icon: "◇",
-    title: "Bug Bounty Triage Support",
-    body: "Reproduce, validate, and write clean H1-style reports with impact analysis and PoC chains.",
   },
   {
     icon: "⌁",
@@ -252,7 +211,7 @@ function Terminal() {
     return () => clearInterval(id);
   }, [lines.length]);
   return (
-    <div className="relative rounded-lg border border-border bg-black/60 p-4 font-mono text-sm shadow-[0_0_60px_-20px_oklch(0.85_0.22_145/0.4)]">
+    <div className="relative rounded-lg border border-border bg-black/60 p-4 font-mono text-sm shadow-[0_0_60px_-20px_oklch(0.75_0.22_300/0.4)]">
       <div className="mb-3 flex items-center gap-1.5">
         <span className="h-2.5 w-2.5 rounded-full bg-danger/70" />
         <span className="h-2.5 w-2.5 rounded-full bg-warn/70" />
@@ -373,7 +332,7 @@ export default function Index() {
           <div className="mt-8 flex flex-wrap gap-3">
             <a
               href={`mailto:${EMAIL}`}
-              className="group relative overflow-hidden rounded border border-primary bg-primary px-5 py-3 text-sm font-semibold tracking-wider text-primary-foreground transition hover:shadow-[0_0_30px_oklch(0.85_0.22_145/0.6)]"
+              className="group relative overflow-hidden rounded border border-primary bg-primary px-5 py-3 text-sm font-semibold tracking-wider text-primary-foreground transition hover:shadow-[0_0_30px_oklch(0.75_0.22_300/0.6)]"
             >
               <span className="relative z-10">→ INITIATE CONTACT</span>
             </a>
@@ -443,14 +402,14 @@ export default function Index() {
                 cx="100"
                 cy="100"
                 r="96"
-                stroke="oklch(0.85 0.22 145 / 0.35)"
+                stroke="oklch(0.75 0.22 300 / 0.35)"
                 strokeDasharray="4 6"
               />
               <circle
                 cx="100"
                 cy="100"
                 r="82"
-                stroke="oklch(0.78 0.18 195 / 0.25)"
+                stroke="oklch(0.72 0.18 270 / 0.25)"
                 strokeDasharray="2 10"
               />
             </svg>
@@ -461,7 +420,7 @@ export default function Index() {
             >
               <path
                 d="M100 4 V20 M100 180 V196 M4 100 H20 M180 100 H196"
-                stroke="oklch(0.85 0.22 145 / 0.7)"
+                stroke="oklch(0.75 0.22 300 / 0.7)"
                 strokeWidth="1.5"
               />
             </svg>
@@ -475,14 +434,14 @@ export default function Index() {
               <span key={c} className={`absolute h-6 w-6 border-primary ${c}`} />
             ))}
             {/* image */}
-            <div className="absolute inset-6 overflow-hidden rounded-full border border-primary/40 shadow-[0_0_60px_-10px_oklch(0.85_0.22_145/0.5)]">
+            <div className="absolute inset-6 overflow-hidden rounded-full border border-primary/40 shadow-[0_0_60px_-10px_oklch(0.75_0.22_300/0.5)]">
               <img src={ahmed} alt="Ahmed Samy" className="h-full w-full object-cover" />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
               <div
                 className="pointer-events-none absolute inset-0"
                 style={{
                   background:
-                    "repeating-linear-gradient(0deg, transparent 0, transparent 3px, oklch(0.85 0.22 145 / 0.06) 3px, oklch(0.85 0.22 145 / 0.06) 4px)",
+                    "repeating-linear-gradient(0deg, transparent 0, transparent 3px, oklch(0.75 0.22 300 / 0.06) 3px, oklch(0.75 0.22 300 / 0.06) 4px)",
                 }}
               />
             </div>
@@ -518,7 +477,7 @@ export default function Index() {
                   {s.v.map((t) => (
                     <span
                       key={t}
-                      className="rounded border border-border bg-background/60 px-2 py-1 text-xs text-foreground/90 transition hover:border-primary hover:text-primary hover:shadow-[0_0_12px_oklch(0.85_0.22_145/0.4)]"
+                      className="rounded border border-border bg-background/60 px-2 py-1 text-xs text-foreground/90 transition hover:border-primary hover:text-primary hover:shadow-[0_0_12px_oklch(0.75_0.22_300/0.4)]"
                     >
                       {t}
                     </span>
@@ -765,7 +724,7 @@ export default function Index() {
             className="absolute inset-0 -z-10 opacity-30"
             style={{
               backgroundImage:
-                "radial-gradient(circle at 50% 50%, oklch(0.85 0.22 145 / 0.2), transparent 60%)",
+                "radial-gradient(circle at 50% 50%, oklch(0.75 0.22 300 / 0.2), transparent 60%)",
             }}
           />
           <div className="text-[11px] tracking-[0.3em] text-accent">// handshake.init</div>

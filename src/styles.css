@@ -4,15 +4,15 @@
 
 @layer base {
   :root {
-    --background: oklch(0.13 0.02 160);
-    --foreground: oklch(0.95 0.02 150);
-    --surface: oklch(0.17 0.025 160);
-    --muted: oklch(0.22 0.02 160);
-    --muted-foreground: oklch(0.65 0.04 150);
-    --border: oklch(0.28 0.04 155);
-    --primary: oklch(0.85 0.22 145);
-    --primary-foreground: oklch(0.12 0.02 160);
-    --accent: oklch(0.78 0.18 195);
+    --background: oklch(0.11 0.03 300);
+    --foreground: oklch(0.95 0.02 290);
+    --surface: oklch(0.15 0.04 300);
+    --muted: oklch(0.20 0.03 300);
+    --muted-foreground: oklch(0.62 0.05 290);
+    --border: oklch(0.26 0.06 295);
+    --primary: oklch(0.75 0.22 300);
+    --primary-foreground: oklch(0.10 0.02 300);
+    --accent: oklch(0.72 0.18 270);
     --danger: oklch(0.7 0.25 25);
     --warn: oklch(0.85 0.18 85);
   }
@@ -20,18 +20,20 @@
   * {
     border-color: var(--border);
   }
+
   html,
   body {
     background: var(--background);
     color: var(--foreground);
     font-family: "JetBrains Mono", ui-monospace, monospace;
   }
+
   body {
     background-image:
-      radial-gradient(circle at 20% 10%, oklch(0.85 0.22 145 / 0.08), transparent 50%),
-      radial-gradient(circle at 80% 90%, oklch(0.78 0.18 195 / 0.06), transparent 50%),
-      linear-gradient(oklch(0.85 0.22 145 / 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, oklch(0.85 0.22 145 / 0.03) 1px, transparent 1px);
+      radial-gradient(circle at 20% 10%, oklch(0.75 0.22 300 / 0.08), transparent 50%),
+      radial-gradient(circle at 80% 90%, oklch(0.72 0.18 270 / 0.06), transparent 50%),
+      linear-gradient(oklch(0.75 0.22 300 / 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, oklch(0.75 0.22 300 / 0.03) 1px, transparent 1px);
     background-size:
       auto,
       auto,
@@ -39,6 +41,7 @@
       40px 40px;
     overflow-x: hidden;
   }
+
   ::selection {
     background: var(--primary);
     color: var(--primary-foreground);
@@ -48,24 +51,24 @@
 @layer utilities {
   .text-glow {
     text-shadow:
-      0 0 12px oklch(0.85 0.22 145 / 0.6),
-      0 0 32px oklch(0.85 0.22 145 / 0.3);
+      0 0 12px oklch(0.75 0.22 300 / 0.6),
+      0 0 32px oklch(0.75 0.22 300 / 0.3);
   }
+
   .text-glow-cyan {
-    text-shadow: 0 0 12px oklch(0.78 0.18 195 / 0.6);
+    text-shadow: 0 0 12px oklch(0.72 0.18 270 / 0.6);
   }
+
   .scanlines::before {
     content: "";
     position: absolute;
     inset: 0;
     pointer-events: none;
-    background: repeating-linear-gradient(
-      0deg,
-      transparent 0,
-      transparent 3px,
-      oklch(0 0 0 / 0.15) 3px,
-      oklch(0 0 0 / 0.15) 4px
-    );
+    background: repeating-linear-gradient(0deg,
+        transparent 0,
+        transparent 3px,
+        oklch(0 0 0 / 0.15) 3px,
+        oklch(0 0 0 / 0.15) 4px);
     mix-blend-mode: overlay;
   }
 }
@@ -75,59 +78,70 @@
   font-style: normal;
   font-weight: 100 800;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/jetbrainsmono/v18/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxjPVmUsaaDhw.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/jetbrainsmono/v18/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxjPVmUsaaDhw.woff2) format("woff2");
 }
+
 @font-face {
   font-family: "Space Grotesk";
   font-style: normal;
   font-weight: 300 700;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/spacegrotesk/v16/V8mDoQDjQSkFtoMM3T6r8E7mPb1hHzQp.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/spacegrotesk/v16/V8mDoQDjQSkFtoMM3T6r8E7mPb1hHzQp.woff2) format("woff2");
 }
 
 @keyframes glitch-x {
+
   0%,
   100% {
     transform: translateX(0);
   }
+
   20% {
     transform: translateX(-2px);
   }
+
   40% {
     transform: translateX(2px);
   }
+
   60% {
     transform: translateX(-1px);
   }
+
   80% {
     transform: translateX(1px);
   }
 }
+
 @keyframes blink {
+
   0%,
   49% {
     opacity: 1;
   }
+
   50%,
   100% {
     opacity: 0;
   }
 }
+
 @keyframes float-up {
   from {
     transform: translateY(20px);
     opacity: 0;
   }
+
   to {
     transform: translateY(0);
     opacity: 1;
   }
 }
+
 .animate-blink {
   animation: blink 1s steps(1) infinite;
 }
+
 .animate-glitch {
   animation: glitch-x 0.3s infinite;
 }
