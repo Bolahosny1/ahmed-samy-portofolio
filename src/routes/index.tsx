@@ -336,14 +336,7 @@ export default function Index() {
             >
               <span className="relative z-10">→ INITIATE CONTACT</span>
             </a>
-            <a
-              href="/cv"
-              target="_blank"
-              rel="noreferrer"
-              className="rounded border border-accent/60 bg-accent/10 px-5 py-3 text-sm tracking-wider text-accent transition hover:bg-accent hover:text-background"
-            >
-              ◉ view_cv
-            </a>
+
             <a
               href={CV_FILE}
               download="Ahmed_Samy_CV.pdf"
